@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 import javax.swing.Box;
 import javax.swing.JButton;
@@ -138,12 +139,6 @@ public class ArtistChooserPanel extends JPanel implements ActionListener {
 
 		boxAroundSuggestions.add(autoFillSuggestions); 
 
-		Box boxAroundTypingAreaAndSuggestions = Box.createVerticalBox(); 
-
-		//		boxAroundTypingAreaAndSuggestions.add(boxAroundTypeArea); 
-		//		boxAroundTypingAreaAndSuggestions.add(boxAroundSuggestions); 
-		//		
-		//		add(boxAroundTypingAreaAndSuggestions, BorderLayout.CENTER); 
 		add(boxAroundTypeArea, BorderLayout.NORTH); 
 		add(boxAroundSuggestions, BorderLayout.CENTER); 
 		add(boxAroundButton, BorderLayout.SOUTH);
@@ -152,13 +147,12 @@ public class ArtistChooserPanel extends JPanel implements ActionListener {
 	
 	public void updateAutoFillerSuggestions() {
 
-		//not sure why I'm working in arrays here... I think there used to be a good reason?
-		String[] autoFillerResults = autoFiller.get(typeArea.getText()).toArray(EMPTY_STRING_ARRAY); 
+		ArrayList<String> autoFillerResults = autoFiller.get(typeArea.getText()); 
 
 		autoFillSuggestions.setText("");
 
-		for (int i = 0; i < autoFillerResults.length; i++) 
-			autoFillSuggestions.append(autoFillerResults[i] + "\n"); 
+		for (int i = 0; i < autoFillerResults.size(); i++) 
+			autoFillSuggestions.append(autoFillerResults.get(i) + "\n"); 
 		
 		// Update the highlight area
 		autoFillSuggestions.setHighLightArea(autoFillSelectionPos);
