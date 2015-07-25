@@ -73,8 +73,11 @@ public class ArtistPlaylistDisplayPanel extends JPanel implements ActionListener
 		
 		String command = e.getActionCommand(); 
 		
-		if (command.equals("make")) 
+		if (command.equals("make")) {
 			Scripts.createPlaylistByArtist(titleArea.getText(), artistList.toArray(EMPTY_STRING_ARRAY));
+			titleArea.setText(""); 
+			artistList.clear(); 
+		}
 	}
 	@Override
 	public Dimension getSize() {

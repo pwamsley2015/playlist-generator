@@ -7,3 +7,5 @@ What I did do was work on this fun start I had; the user can add Artist names an
 I implemented a custom AutoFill system, where the user can start typing an artist's name, such as "Arc" and then easily fill it in with "Arctic Monkeys." (think google auto fill). 
 
 Not the most useful program, but occasially useful, and it was fun to make with lots of "Applescript from bash from java" hacking. 
+
+Only works on Macs.

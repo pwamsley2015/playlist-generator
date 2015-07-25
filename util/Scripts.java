@@ -17,8 +17,8 @@ public class Scripts {
 		args[2] = commands; 
 
 		try {
-			Runtime.getRuntime().exec(args);
-		} catch (IOException e) {
+			Runtime.getRuntime().exec(args).waitFor();
+		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		} 
 

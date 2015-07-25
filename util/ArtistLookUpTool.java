@@ -57,17 +57,7 @@ public class ArtistLookUpTool {
 		 * Format: 
 		 * ,Alt-J,Artic\ Monkeys,Blink-182,
 		 */
-		Scripts.createArtistListFile();  
-
-		/*
-		 * Give it some time to run that script
-		 * (This is actually needed)
-		 */
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException ex) {
-			ex.printStackTrace();
-		}
+		Scripts.createArtistListFile(); 
 		
 		/*
 		 * Now lets fill up our "dictionary" which contains all the artists names

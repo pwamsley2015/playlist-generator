@@ -59,16 +59,6 @@ private static ArrayList<String> songNames = new ArrayList<>(); //the dictionary
 		 * ,Alt-J,Artic\ Monkeys,Blink-182,
 		 */
 		Scripts.createSongListFile();  
-
-		/*
-		 * Give it some time to run that script
-		 * (This is actually needed)
-		 */
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException ex) {
-			ex.printStackTrace();
-		}
 		
 		/*
 		 * Now lets fill up our "dictionary" which contains all the artists names
